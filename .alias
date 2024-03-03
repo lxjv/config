@@ -1,28 +1,39 @@
 alias rmd='rm -rf'
 
+# editor binds
 alias e=$EDITOR
 alias v=$VISUAL
 
 alias vi=vim
+alias vim="nvim"
 alias nv=nvim
 
-alias ytdl=yt-dlp
-
+# folder nav
 alias ls="exa -1"
+alias la="exa -1a"
 alias ll="exa -l"
 alias tree="exa --tree -l"
 
 alias cdd="cd .."
 alias cdb="cd -"
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ....="cd ../../../.."
+
+# i hate python
 alias py="python3"
 alias python="python3"
-alias tw="twtxt"
 
+# media apps
 alias mk=musikcube
+alias ytdl=yt-dlp
 
+# for my selfhosted git server
 alias soft="ssh soft"
 
+# emacs is the *flips a coin* best editor
 alias doom="~/.config/emacs/bin/doom"
 
 alias :q=exit
