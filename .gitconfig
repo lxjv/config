@@ -1,0 +1,71 @@
+[include]
+	path = ~/.gitconfig.local
+
+[core]
+	editor = vim
+	pager = delta
+
+[user]
+	name = Laker Turner
+	email = la@laker.gay
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOAbu30yEWXnSFjscc94wwa+Qj7OQa9bgP9SYcDzjUY/
+
+[init]
+	defaultBranch = main
+
+[commit]
+	gpgsign = true
+	
+[push] 
+	default = current
+
+[diff]
+	algorithm = histogram
+
+[merge]
+	conflictstyle = zdiff3
+
+[branch]
+	sort = -committerdate
+
+[alias]
+	a = add
+	co = checkout
+	st = status
+	c = 'commit'
+	unstage = 'reset HEAD --'
+	p = push
+	last = 'log -1 HEAD'
+	cl = 'clone'
+
+# signing stuff weeeeeeeeeeeeeee
+
+[gpg]
+	format = ssh
+	
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+# remote url aliases so i dont get carpal tunnel from writing out git@git.sr.ht:~la/fuck-this
+
+[url "ssh://soft"]
+	insteadOf = soft
+	insteadOf = ss
+	insteadOf = la
+
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+	
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+
+[url "git@github.com:"]
+	insteadOf = gh:
+	pushInsteadOf = "https://github.com/"
+	
+[url "git@git.sr.ht:"]
+	insteadOf = git@sr.ht:
+	insteadOf = sr.ht:
+	
+[url "ssh://aur@aur.archlinux.org"]
+	insteadOf = aur

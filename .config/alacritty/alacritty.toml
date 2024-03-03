@@ -1,0 +1,6 @@
+import = [
+	"~/.config/alacritty/theme.toml"
+]
+
+[font]
+normal = { family = "BlexMono Nerd Font" }
