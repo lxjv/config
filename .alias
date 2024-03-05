@@ -8,6 +8,12 @@ alias vi=vim
 alias vim="nvim"
 alias nv=nvim
 
+# util binds
+alias t=tmux
+alias j=just
+alias lg=lazygit
+
+
 # folder nav
 alias ls="exa -1"
 alias la="exa -1a"
@@ -29,7 +35,7 @@ alias python="python3"
 # media apps
 alias mk=musikcube
 alias ytdl=yt-dlp
-
+alias cmatrix="cmatrix -C blue"
 # for my selfhosted git server
 alias soft="ssh soft"
 
