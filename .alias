@@ -29,17 +29,20 @@ alias ....="cd ../../.."
 alias ....="cd ../../../.."
 
 # i hate python
-alias py="python3"
-alias python="python3"
+alias py="/opt/homebrew/bin/python3.12"
+alias python="/opt/homebrew/bin/python3.12"
+alias pip="/opt/homebrew/bin/pip3.12"
 
 # media apps
 alias mk=musikcube
 alias ytdl=yt-dlp
 alias cmatrix="cmatrix -C blue"
-# for my selfhosted git server
-alias soft="ssh soft"
 
 # emacs is the *flips a coin* best editor
 alias doom="~/.config/emacs/bin/doom"
 
 alias :q=exit
+
+alias clock='arttime --nolearn -a spacetravel -t "lets write you a cv for great good" --ac 4'
+alias mkd=mkdir
+

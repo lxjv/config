@@ -17,7 +17,7 @@ mkcd () {
 }
 
 new-alias () {
-    echo "alias $1\n" >> .alias
+    echo "alias $1\n" >> ~/.alias
 }
 
 reload () {
@@ -32,6 +32,10 @@ random () {
 }
 
 ,update () {
-  brew update
-  brew upgrade
+  brewup.sh
+}
+
+ta () {
+  SESSION=$(tmux list-sessions -F \#S | gum filter --placeholder "Pick session...")
+  tmux switch-client -t $SESSION || tmux attach -t $SESSION
 }
