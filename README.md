@@ -1,13 +1,12 @@
 # LA's config files.
 
-> You might also be interested in my [NixOS config](https://github.com/lxjv/nixos) (link currently broken)
+> That ain't a config file, THIS is a config file
 
 ## Programs
-
-- Shell: zsh (with tmux)
-- Editors: Vim, Neovim
-
-> I'll add more programs as i configure them
+- Terminal: Alacritty
+- Shell: zsh
+- Multiplexer: tmux
+- Editors: [Neovim](https://github.com/lxjv/dotfiles/tree/main/.config/nvim) ([x](https://neovim.io)), Vim
 
 ## Installation
 
