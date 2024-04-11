@@ -10,6 +10,11 @@ return {
       local dashboard = require 'alpha.themes.dashboard'
 
       local header_meow = {
+        [[ ]],
+        [[ ]],
+        [[ ]],
+        [[ ]],
+        [[ ]],
         [[                                   (_)              |\      _,,,---,,_     ]],
         [[ _ __ ___   ___  _____     __   ___ _ __ ___   ZZzz /,`.-'`'    -.  ;-;;,_]],
         [[| '_ ` _ \ / _ \/ _ \ \ /\ \ \ / / | '_ ` _ \     |,4-  ) )-,_. ,\ (  `'-']],
@@ -39,15 +44,20 @@ return {
       -- Set menu
       dashboard.section.buttons.val = {
         dashboard.button('e', '󰥨  > File tree', '<leader>e'),
-        dashboard.button('sf', '󰱼  > Find files', '<leader>sf'),
-        dashboard.button('sg', '󰱼  > Fuzzy grep', '<leader>sg'),
-        dashboard.button('sn', '  > Config', '<leader>sn'),
-        --dashboard.button( "t", "  > Terminal" , "<S-T>"),
+        dashboard.button('f', '󰱼  > Find files', '<leader>sf'),
+        dashboard.button('g', '󰱼  > Fuzzy grep', '<leader>sg'),
+        dashboard.button('c', '  > Config', '<leader>sn'),
+        --dashboard.button('t', '  > Terminal (why?)', '<S-T>'),
         dashboard.button('q', '󰗼  > Quit :(', ':qa<CR>'),
       }
 
-      dashboard.section.footer.val = 'Rest in peace Bram Moolenaar // 1961 - 2023'
+      local footer_fortunes = {
+        'Rest in peace Bram Moolenaar // 1961 - 2023',
+        'Time is an illusion. Lunch-time doubly so.',
+        'So long, and thanks for all the fish',
+      }
 
+      dashboard.section.footer.val = footer_fortunes[math.random(#footer_fortunes)]
       -- Send config to alpha
       alpha.setup(dashboard.opts)
     end,

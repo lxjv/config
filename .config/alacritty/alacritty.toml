@@ -1,6 +1,9 @@
 import = [
-	"~/.config/alacritty/theme.toml"
+	"~/dotfiles/.config/alacritty/font.toml",
+	"~/dotfiles/.config/alacritty/theme.toml",
 ]
+live_config_reload = true
+shell = "/usr/local/bin/fish"
 
-[font]
-normal = { family = "BlexMono Nerd Font" }
+[window]
+blur = true

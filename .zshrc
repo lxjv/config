@@ -9,29 +9,21 @@ source ~/.func
 export EDITOR=nvim
 export VISUAL=neovide
 
-# prompt
-eval "$(starship init zsh)" # might make my own prompt tbh
+# prompt - might replace soon
+export STARSHIP_CONFIG=~/dotfiles/.config/starship.toml # I have NO idea why this works but it does
+eval "$(starship init zsh)"
 
 # zoxide - cd but smarter
 eval "$(zoxide init --cmd cd zsh)"
 set autocd
 
+# atuin - shell history, but smarter
+eval "$(atuin init --disable-up-arrow zsh)"
+
 # other commands
-eval $(thefuck --alias)
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-. "$HOME/.asdf/asdf.sh"
+eval $(thefuck --alias) # funniest command ever
 
-# bun completions
-[ -s "/Users/la/.bun/_bun" ] && source "/Users/la/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
-# initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
+# MacOS only config
+if [[ $(uname) == "Darwin" ]]; then
+	. ~/.config/zsh/mac.zsh
+fi
