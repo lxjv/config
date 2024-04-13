@@ -9,3 +9,10 @@ if status is-interactive
   set _ZO_ECHO 1
   zoxide init --cmd cd fish | source
 end
+
+# pnpm
+set -gx PNPM_HOME "/Users/la/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
