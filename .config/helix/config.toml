@@ -1,0 +1,22 @@
+# Laker's Helix config
+
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+cursorline = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name", "position"]
+right = ["file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
