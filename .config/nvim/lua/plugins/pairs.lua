@@ -1,3 +1,5 @@
+-- Auto pairs my ([{}]), cause i forget to
+
 return {
   'windwp/nvim-autopairs',
   -- Optional dependency
