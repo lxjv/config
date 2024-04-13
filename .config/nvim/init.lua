@@ -718,7 +718,7 @@ require('lazy').setup {
   --require 'kickstart.plugins.debug',
   --require 'kickstart.plugins.indent_line',
 
-  { import = 'custom.plugins' },
+  { import = 'plugins' },
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
