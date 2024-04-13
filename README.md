@@ -4,9 +4,14 @@
 
 ## Programs
 - Terminal: Alacritty
-- Shell: zsh
-- Multiplexer: tmux
-- Editors: [Neovim](https://github.com/lxjv/dotfiles/tree/main/.config/nvim) ([x](https://neovim.io)), Vim
+- Shells: zsh, fish
+  - Prompt: Starship
+  - Multiplexer: tmux
+- Editors:
+  - [Neovim](https://github.com/lxjv/dotfiles/tree/main/.config/nvim) ([x](https://neovim.io))
+  - [Vim](https://github.com/lxjv/dotfiles/tree/main/.vimrc)
+  - Helix
+  - (Doom) Emacs
 
 ## Installation
 
@@ -24,7 +29,7 @@ nix-shell -p stow
 brew install stow
 ```
 
-2. Clone this repo and tell stow to initialise it
+2. Clone this repo and use stow to symlink everything
 ```sh
 git clone https://github.com/lxjv/dotfiles .dotfiles
 cd .dotfiles

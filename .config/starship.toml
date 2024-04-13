@@ -118,7 +118,8 @@ disabled = false
 [directory]
 home_symbol = "~"
 truncation_length = 4
-truncation_symbol = ".../"
+truncate_to_repo = true
+truncation_symbol = ""
 read_only = " 🔒"
 style = "italic blue"
 format = ' [$path]($style)[$read_only]($read_only_style) '
@@ -130,7 +131,7 @@ format = "[$duration ](italic bright-yellow)"
 [jobs]
 format = "[ $symbol$number]($style)"
 style = "white"
-symbol = "[▶ ](blue italic)"
+symbol = "✦"
 
 [localip]
 ssh_only = true
@@ -168,12 +169,12 @@ style = "italic bright-blue"
 [git_status]
 style = "italic bright-blue"
 format = """([⎪$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed⎥]($style))"""
-conflicted = "[◪◦](italic bright-magenta)"
-ahead = "[▲│[${count}](bold white)│](italic green)"
-behind = "[▽│[${count}](bold white)│](italic red)"
+conflicted = "[◪◦ ](italic bright-magenta)"
+ahead = "[▲│[${count}](bold white) │](italic green)"
+behind = "[▽│[${count}](bold white) │](italic red)"
 diverged = "[◇ ▲┤[${ahead_count}](regular white)│▽┤[${behind_count}](regular white)│](italic bright-magenta)"
 untracked = "[dr ](italic bright-yellow)"
-stashed = "[◦◫◦](italic white)"
+stashed = "[◦◫◦ ](italic white)"
 modified = "[ m ](italic yellow)"
 staged = " [s [$count](bold white) │](italic bright-cyan)"
 renamed = "[◎◦ ](italic bright-blue)"
