@@ -41,6 +41,7 @@ return {
       default_integrations = true,
       integrations = {
         cmp = true,
+        alpha = true,
         gitsigns = true,
         nvimtree = false,
         treesitter = true,
