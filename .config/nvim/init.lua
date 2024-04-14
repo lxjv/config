@@ -33,7 +33,7 @@ opt.clipboard = 'unnamedplus'
 opt.breakindent = true
 
 -- Save undo history
-opt.undodir='~/.local/share/nvim/undo'
+opt.undodir = vim.fn.stdpath 'data' .. '/undo'
 opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
@@ -74,7 +74,7 @@ if g.neovide then
   require 'neovide' -- sets some gui stuff
 end
 
--- setup lazy 
+-- setup lazy
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 
 if not vim.loop.fs_stat(lazypath) then
@@ -88,4 +88,3 @@ require('lazy').setup { { import = 'plugins' } }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
