@@ -6,6 +6,11 @@ crcmd('InsertEnter', {
   command = 'norm zz',
 })
 
+crcmd({ 'BufRead', 'BufNewFile' }, {
+  pattern = '*.njk',
+  command = 'setf htmldjango',
+})
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
@@ -16,3 +21,4 @@ crcmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+

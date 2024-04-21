@@ -22,8 +22,10 @@ g.maplocalleader = ' '
 opt.number = true
 opt.relativenumber = true
 
+-- mouse support = true
 opt.mouse = 'a'
 
+-- we have a statusbar
 opt.showmode = false
 
 -- use system clipboard

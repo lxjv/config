@@ -1,8 +1,6 @@
 -- i just put random plugins here that arent interesting enough for their own files
 
 return {
-  -- adds justfile syntax highlight
-  { 'NoahTheDuke/vim-just', ft = { 'just' } },
 
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
@@ -14,5 +12,16 @@ return {
 
   -- statusline
   { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }, opts = { theme = 'catpuccin' } },
-}
 
+  -- comments
+
+  { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' }, opts = {} },
+
+  {
+    'max397574/colortils.nvim',
+    cmd = 'Colortils',
+    config = function()
+      require('colortils').setup()
+    end,
+  },
+}

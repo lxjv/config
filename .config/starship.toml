@@ -95,7 +95,7 @@ $time\
 add_newline = true
 
 [character]
-success_symbol = "[>](bold blue)[>](bold rosewater)[>](bold white)"
+success_symbol = "[>](bold blue)[<](bold rosewater)[>](bold white)"
 error_symbol = "[x >](bold red)"
 vimcmd_symbol = "[vim <](bold green)"
 
@@ -126,7 +126,7 @@ format = ' [$path]($style)[$read_only]($read_only_style) '
 
 [cmd_duration]
 min_time = 500
-format = "[$duration ](italic bright-yellow)"
+format = " [$duration ](italic bright-yellow)"
 
 [jobs]
 format = "[ $symbol$number]($style)"
