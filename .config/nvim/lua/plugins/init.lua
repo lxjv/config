@@ -9,10 +9,9 @@ return {
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
+  -- highlights todo comments
+  { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' }, opts = {} },
+
   -- Tracks my coding time
   { 'wakatime/vim-wakatime', lazy = false },
-
-  -- statusline
-  { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }, opts = { theme = 'catpuccin' } },
 }
-
