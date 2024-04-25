@@ -12,6 +12,7 @@ return { -- Useful plugin to show you pending keybinds.
       ['<leader>s'] = { name = 'Search', _ = 'which_key_ignore' },
       ['<leader>w'] = { name = 'Workspace', _ = 'which_key_ignore' },
       ['<leader>g'] = { name = 'Git', _ = 'which_key_ignore' },
+      ['<leader>v'] = { name = 'Visuals', _ = 'which_key_ignore' },
     }
   end,
 }

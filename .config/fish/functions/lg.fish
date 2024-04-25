@@ -1,4 +1,4 @@
-function lg --wraps=lazygit --wraps='exa -1' --description 'alias lg=lazygit'
-  lazygit $argv
+function lg --wraps=lazygit --wraps='exa -1' --wraps='eza $EZA_STANDARD_OPTIONS $EZA_LG_OPTIONS' --description 'alias lg eza $EZA_STANDARD_OPTIONS $EZA_LG_OPTIONS'
+  eza $EZA_STANDARD_OPTIONS $EZA_LG_OPTIONS $argv
         
 end

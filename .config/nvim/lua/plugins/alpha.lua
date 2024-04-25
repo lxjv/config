@@ -88,9 +88,7 @@ return {
       dashboard.button('e', '󰀶  > File tree', '<leader>e'),
       dashboard.button('f', '󰥨  > Find files', '<leader>sf'),
       dashboard.button('z', '󰱼  > Fuzzy find', '<leader>sg'),
-      dashboard.button('c', '  > Config', '<leader>sn'),
-      dashboard.button('l', '  > Lazy', '<cmd>Lazy<CR>'),
-      dashboard.button('t', '  > Terminal', '<S-T>'),
+      -- dashboard.button('c', '  > Config', '<leader>sn'),
       dashboard.button('q', '󰗼  > Quit :(', '<cmd>qa<CR>'),
     }
 

@@ -37,3 +37,5 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 
 set('n', '<leader>dt', '<cmd>TodoTelescope<CR>', { desc = 'Show all TODO comments' })
+set('n', '<leader>e', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open file explorer' })
+set('n', '<leader>t', '<cmd>terminal<CR>', { desc = 'Open integrated terminal' })

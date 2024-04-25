@@ -1,5 +1,11 @@
 local crcmd = vim.api.nvim_create_autocmd
 
+-- autocmd BufNewFile,BufRead *.njk setf html
+crcmd({'BufNewFile', 'BufRead'}, {
+  pattern = "*.njk",
+  command = "setf htmldjango"
+})
+
 -- autocmd InsertEnter * norm zz
 crcmd('InsertEnter', {
   pattern = '*',
