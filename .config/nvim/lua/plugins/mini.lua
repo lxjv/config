@@ -14,13 +14,5 @@ return {
     -- - sd'   - [S]urround [D]elete [']quotes
     -- - sr)'  - [S]urround [R]eplace [)] [']
     require('mini.surround').setup()
-
-    -- nice file manager
-    require('mini.files').setup {
-      mappings = {
-        close = '<esc>',
-        go_in = '<enter>',
-      },
-    }
   end,
 }

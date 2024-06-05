@@ -3,8 +3,20 @@
 
 local set = vim.keymap.set
 
--- Set highlight on search, but clear on pressing <Esc> in normal mode
-vim.opt.hlsearch = true
+set('n', '<leader>dt', '<cmd>TodoTelescope<CR>', { desc = 'Show all TODO comments' })
+set('n', '<leader>f', '<cmd>Oil<CR>', { desc = 'Open file explorer' })
+
+-- visual commands 
+set('n', '<leader>vb', '<cmd>lua require("barbecue.ui").toggle()<CR>', { desc = 'Toggle barbecue' })
+set('n', '<leader>vf', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle file tree' })
+
+-- buffers
+set('n', '<leader>bv', '<cmd>wincmd v<CR>', { desc = "Buffer Vertical" })
+set('n', '<leader>bh', '<cmd>wincmd s<CR>', { desc = "Buffer Horizontal" })
+set('n', '<leader>bt', '<cmd>wincmd v<CR><cmd>terminal<CR>', { desc = "Open Terminal" })
+
+-- THIS BIT'S A FUCKING MESS
+
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
@@ -35,7 +47,3 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-
-set('n', '<leader>dt', '<cmd>TodoTelescope<CR>', { desc = 'Show all TODO comments' })
-set('n', '<leader>e', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open file explorer' })
-set('n', '<leader>t', '<cmd>terminal<CR>', { desc = 'Open integrated terminal' })
