@@ -22,6 +22,10 @@ vim.opt.breakindent = true
 
 -- Save undo history
 vim.opt.undofile = true
+vim.opt.undodir = vim.fn.stdpath 'cache' .. '/undodir'
+
+-- fuck swap files
+vim.opt.swapfile = false
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
@@ -39,7 +43,7 @@ vim.opt.timeoutlen = 300
 
 -- Configure how new splits should be opened
 vim.opt.splitright = true
-vim.opt.splitbelow = false
+vim.opt.splitbelow = true
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
