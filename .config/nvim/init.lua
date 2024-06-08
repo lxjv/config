@@ -17,15 +17,14 @@ require 'la.keymaps'
 require 'la.autocmds'
 
 if vim.g.vscode then
-    require 'la.vscode'
+    require 'la.vscode' -- neovim but worse
 end
 
 if vim.g.neovide then
-    require 'la.gui'
+    require 'la.gui' -- for the twice a year i use neovide
 end
 
 -- [[ Install `lazy.nvim` plugin manager ]]
---    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
     local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -38,29 +37,25 @@ require('lazy').setup({
 
     { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
+    -- justfile syntax
     { 'NoahTheDuke/vim-just', ft = { 'just' } },
 
+    -- time tracking
     { 'wakatime/vim-wakatime', lazy = false },
 
-    {
+    { -- discord rich presence
         'vyfor/cord.nvim',
         build = './build',
         event = 'VeryLazy',
         opts = {},
     },
 
-    {
+    { -- funky ui
         'folke/noice.nvim',
         event = 'VeryLazy',
-        opts = {
-            -- add any options here
-        },
+        opts = {},
         dependencies = {
-            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
             'MunifTanjim/nui.nvim',
-            -- OPTIONAL:
-            --   `nvim-notify` is only needed, if you want to use the notification view.
-            --   If not available, we use `mini` as the fallback
             'rcarriga/nvim-notify',
         },
     },
@@ -71,8 +66,6 @@ require('lazy').setup({
         notify = false,
     },
     ui = {
-        -- If you are using a Nerd Font: set icons to an empty table which will use the
-        -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
         icons = vim.g.have_nerd_font and {} or {
             cmd = '⌘',
             config = '🛠',
