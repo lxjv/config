@@ -58,3 +58,6 @@ vim.opt.scrolloff = 10
 
 -- Set highlight on search
 vim.opt.hlsearch = true
+
+-- EditorConfig support
+vim.g.editorconfig = true
