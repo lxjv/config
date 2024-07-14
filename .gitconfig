@@ -8,7 +8,7 @@
 [user]
 	name = Laker Turner
 	email = la@laker.gay
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOAbu30yEWXnSFjscc94wwa+Qj7OQa9bgP9SYcDzjUY/
+	signingkey =  ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM1eDPAc/Ue0mSnxYkERSMV82LkJytWkmJqqxGYTE9th
 
 [init]
 	defaultBranch = main

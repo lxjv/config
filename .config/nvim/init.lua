@@ -33,15 +33,25 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+    -- ** MY PLUGINS
+    {
+        dir = '/Users/la/Projects/dev/extensions/nvim/itchy',
+    },
+
     'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically.
 
-    { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-
-    -- justfile syntax
-    { 'NoahTheDuke/vim-just', ft = { 'just' } },
+    {
+        'folke/todo-comments.nvim',
+        event = 'VimEnter',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('todo-comments').setup()
+            vim.keymap.set('n', '<leader>dt', '<cmd>TodoTelescope cwd=<CR>' .. vim.fn.getcwd(), { desc = 'Show TODO comments' })
+        end,
+    },
 
     -- time tracking
-    { 'wakatime/vim-wakatime', lazy = false },
+    { 'wakatime/vim-wakatime', enabled = true, lazy = false },
 
     { -- discord rich presence
         'vyfor/cord.nvim',
@@ -52,6 +62,7 @@ require('lazy').setup({
 
     { -- funky ui
         'folke/noice.nvim',
+        -- enabled = false,
         event = 'VeryLazy',
         opts = {},
         dependencies = {
@@ -59,6 +70,8 @@ require('lazy').setup({
             'rcarriga/nvim-notify',
         },
     },
+
+    { 'ellisonleao/glow.nvim', config = true, cmd = 'Glow' },
 
     { import = 'plugins' },
 }, { -- lazy settings

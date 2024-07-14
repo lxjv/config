@@ -1,6 +1,13 @@
--- buffer commands
+local bufcmds = {
+    { 't', '<cmd>terminal<CR>', 'Terminal' },
+    { 'f', '<cmd>Oil<CR>', 'Oil (file manager)' },
+}
 
-vim.keymap.set('n', '<leader>bv', '<cmd>wincmd v<CR>', { desc = 'Vertical split' })
+for i in ipairs(bufcmds) do
+    -- vim.keymap.set('n', '<leader>bv' .. i[1], i[2], { desc = i[3] })
+end
+
+-- buffer commands
 vim.keymap.set('n', '<leader>bt', '<cmd>wincmd v<CR><cmd>terminal<CR>', { desc = 'Open terminal' })
 vim.keymap.set('n', '<leader>bo', '<cmd>wincmd v<CR><cmd>Oil<CR>', { desc = 'Open Oil' })
 

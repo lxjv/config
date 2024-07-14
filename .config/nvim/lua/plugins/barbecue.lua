@@ -10,6 +10,6 @@ return {
         require('barbecue').setup {
             theme = 'catppuccin',
         }
-        vim.keymap.set('n', '<leader>vb', '<cmd>lua require("barbecue.ui").toggle()<CR>', { desc = 'Toggle barbecue' })
+        vim.keymap.set('n', '<leader>tb', '<cmd>lua require("barbecue.ui").toggle()<CR>', { desc = 'Toggle barbecue' })
     end,
 }

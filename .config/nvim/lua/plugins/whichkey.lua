@@ -5,20 +5,32 @@ return {
         require('which-key').setup()
 
         -- Document existing key chains
-        require('which-key').register {
-            ['<leader>c'] = { name = 'Code', _ = 'which_key_ignore' },
-            ['<leader>d'] = { name = 'Document', _ = 'which_key_ignore' },
-            ['<leader>r'] = { name = 'Rename', _ = 'which_key_ignore' },
-            ['<leader>s'] = { name = 'Search', _ = 'which_key_ignore' },
-            ['<leader>w'] = { name = 'Workspace', _ = 'which_key_ignore' },
-            ['<leader>t'] = { name = 'Toggle', _ = 'which_key_ignore' },
-            ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
-            ['<leader>v'] = { name = 'Visuals', _ = 'which_key_ignore' },
-            ['<leader>b'] = { name = 'Buffers', _ = 'which_key_ignore' },
+        require('which-key').add {
+            { '<leader>b', group = 'Buffers' },
+            { '<leader>b_', hidden = true },
+            { '<leader>c', group = 'Code' },
+            { '<leader>c_', hidden = true },
+            { '<leader>d', group = 'Document' },
+            { '<leader>d_', hidden = true },
+            { '<leader>g', group = 'Git' },
+            { '<leader>g_', hidden = true },
+            { '<leader>h', group = 'Git Hunk' },
+            { '<leader>h_', hidden = true },
+            { '<leader>r', group = 'Rename' },
+            { '<leader>r_', hidden = true },
+            { '<leader>s', group = 'Search' },
+            { '<leader>s_', hidden = true },
+            { '<leader>t', group = 'Toggle' },
+            { '<leader>t_', hidden = true },
+            { '<leader>v', group = 'Visuals' },
+            { '<leader>v_', hidden = true },
+            { '<leader>w', group = 'Workspace' },
+            { '<leader>w_', hidden = true },
+            {
+                mode = { 'n', 'v' },
+                { '<leader>h', group = 'Git Hunk' },
+                { '<leader>h_', hidden = true },
+            },
         }
-        -- visual mode
-        require('which-key').register({
-            ['<leader>h'] = { 'Git [H]unk' },
-        }, { mode = 'v' })
     end,
 }
