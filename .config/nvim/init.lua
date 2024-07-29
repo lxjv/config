@@ -78,6 +78,10 @@ require('lazy').setup({
     change_detection = {
         notify = false,
     },
+    install = {
+        -- try to load one of these colorschemes when starting an installation during startup
+        colorscheme = { 'catppuccin' },
+    },
     ui = {
         icons = vim.g.have_nerd_font and {} or {
             cmd = '⌘',

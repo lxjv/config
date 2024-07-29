@@ -11,6 +11,6 @@ return {
                 side = 'right',
             },
         }
-        vim.keymap.set('n', '<leader>tf', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle file tree' })
+        vim.keymap.set('n', '<leader>ft', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle file tree' })
     end,
 }
