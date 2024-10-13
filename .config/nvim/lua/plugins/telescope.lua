@@ -20,7 +20,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
         { 'nvim-telescope/telescope-ui-select.nvim' },
 
         -- Useful for getting pretty icons, but requires a Nerd Font.
-        { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+        { 'echasnovski/mini.icons',                 enabled = vim.g.have_nerd_font },
     },
     config = function()
         -- [[ Configure Telescope ]]
@@ -45,19 +45,18 @@ return { -- Fuzzy Finder (files, lsp, etc)
         -- Enable Telescope extensions if they are installed
         pcall(require('telescope').load_extension, 'fzf')
         pcall(require('telescope').load_extension, 'ui-select')
-        pcall(require('telescope').load_extension 'pomodori')
 
         -- See `:help telescope.builtin`
         local builtin = require 'telescope.builtin'
         vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search Help' })
         vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Search Keymaps' })
-        vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Search Files' })
+        vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Fuzzy Search' })
         -- vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = 'Search Select Telescope' })
         vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = 'Search current Word' })
         vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Search by Grep' })
         vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = 'Search Diagnostics' })
         vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = 'Search Resume' })
-        vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = 'Search Recent Files' })
+        vim.keymap.set('n', '<leader>f.', builtin.oldfiles, { desc = 'Search Recent Files' })
         vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Switch Buffers' })
 
         -- Slightly advanced example of overriding default behavior and theme
@@ -79,12 +78,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
         end, { desc = '[S]earch [/] in Open Files' })
 
         -- Shortcut for searching your Neovim configuration files
-        vim.keymap.set('n', '<leader>sn', function()
+        vim.keymap.set('n', '<leader>fc', function()
             builtin.find_files { cwd = vim.fn.stdpath 'config' }
         end, { desc = 'Search Config' })
-
-        vim.keymap.set('n', '<leader>st', function()
-            require('telescope').extensions.pomodori.timers()
-        end, { desc = 'Manage Pomodori Timers' })
     end,
 }

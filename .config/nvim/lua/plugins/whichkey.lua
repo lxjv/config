@@ -8,6 +8,10 @@ return {
         require('which-key').add {
             { '<leader>b', group = 'Buffers' },
             { '<leader>b_', hidden = true },
+            { '<leader>bh', group = 'Horizontal' },
+            { '<leader>b_', hidden = true },
+            { '<leader>bv', group = 'Vertical' },
+            { '<leader>b_', hidden = true },
             { '<leader>c', group = 'Code' },
             { '<leader>c_', hidden = true },
             { '<leader>d', group = 'Document' },
@@ -24,6 +28,8 @@ return {
             { '<leader>t_', hidden = true },
             { '<leader>v', group = 'Visuals' },
             { '<leader>v_', hidden = true },
+            { '<leader>f', group = 'Files' },
+            { '<leader>f_', hidden = true },
             { '<leader>w', group = 'Workspace' },
             { '<leader>w_', hidden = true },
             {

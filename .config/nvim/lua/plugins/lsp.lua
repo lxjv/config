@@ -123,6 +123,7 @@ return { -- LSP Configuration & Plugins
             -- pyright = {},
             rust_analyzer = {},
             tsserver = {},
+            astro = {},
 
             lua_ls = {
                 settings = {

@@ -1,15 +1,24 @@
+local kset = vim.keymap.set
+
 local bufcmds = {
-    { 't', '<cmd>terminal<CR>', 'Terminal' },
-    { 'f', '<cmd>Oil<CR>', 'Oil (file manager)' },
+    { bind = 't', cmd = '<cmd>terminal<CR>', label = 'Terminal' },
+    { bind = 'f', cmd = '<cmd>Oil<CR>', label = 'Oil (file manager)' },
 }
 
-for i in ipairs(bufcmds) do
-    -- vim.keymap.set('n', '<leader>bv' .. i[1], i[2], { desc = i[3] })
+-- Iterate over bufcmds and set keymaps
+for _, def in ipairs(bufcmds) do
+    local bind = def.bind
+    local cmd = def.cmd
+    local label = def.label
+
+    -- Set keymap
+    kset('n', '<leader>bv' .. bind, '<cmd>wincmd v<CR>' .. cmd, { desc = label })
+    kset('n', '<leader>bh' .. bind, '<cmd>wincmd s<CR>' .. cmd, { desc = label })
 end
 
--- buffer commands
-vim.keymap.set('n', '<leader>bt', '<cmd>wincmd v<CR><cmd>terminal<CR>', { desc = 'Open terminal' })
-vim.keymap.set('n', '<leader>bo', '<cmd>wincmd v<CR><cmd>Oil<CR>', { desc = 'Open Oil' })
+-- other buffer commands
+kset('n', '<leader>bve', '<cmd>vnew<cr>', { desc = 'Empty' })
+kset('n', '<leader>bhe', '<cmd>new<cr>', { desc = 'Empty' })
 
 -- KICKSTART BELOW
 

@@ -51,7 +51,7 @@ require('lazy').setup({
     },
 
     -- time tracking
-    { 'wakatime/vim-wakatime', enabled = true, lazy = false },
+    { 'wakatime/vim-wakatime', lazy = false },
 
     { -- discord rich presence
         'vyfor/cord.nvim',
@@ -70,8 +70,6 @@ require('lazy').setup({
             'rcarriga/nvim-notify',
         },
     },
-
-    { 'ellisonleao/glow.nvim', config = true, cmd = 'Glow' },
 
     { import = 'plugins' },
 }, { -- lazy settings

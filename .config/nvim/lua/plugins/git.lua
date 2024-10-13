@@ -76,7 +76,7 @@ return {
     {
         'tpope/vim-fugitive',
         config = function()
-            vim.keymap.set('n', '<leader>gb', '')
+            vim.keymap.set('n', '<leader>gb', 'Blame sidebar')
         end,
     },
 }
